@@ -111,8 +111,13 @@ image(polygonImage,ball.position.x,ball.position.y,20,20);
   drawSprites();
 }
 function mouseReleased(){
-  Sling1.fly();
+  sling1.fly();
 }
 function mouseDragged(){
   Matter.Body.setPosition(this.ball,{x:mouseX,y:mouseY})
+}
+function keyPressed(){
+  if(keyCode === 32){
+      sling1.attach(this.ball);
+  }
 }
